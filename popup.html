@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #changeColor {
+          margin-top: 5px;
+      }
+      label {
+        display: block;
+      }
+      .center {
+        align-self: center;
+      }
+      .flexContainer {
+        display: flex;
+        flex-direction: column;
+      }
+      .radioLabel {
+        width: calc(100% - 20px)
+      }
+      .speedPresetRadio {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flexContainer">
+      <div id="presetRadioButtons" class="flexContainer">
+        <div>Presets</div>
+        <label class="radioLabel">0.5x <input class="speedPresetRadio" type="radio" name="speedDefault" speed=".5"></label>
+        <label class="radioLabel">1.0x <input class="speedPresetRadio" type="radio" name="speedDefault" speed="1"></label>
+        <label class="radioLabel">1.5x <input class="speedPresetRadio" type="radio" name="speedDefault" speed="1.5"></label>
+        <label class="radioLabel">2.0x <input class="speedPresetRadio" type="radio" name="speedDefault" speed="2.0"></label>
+      </div>
+
+      <label>Custom Speed<input id="customSpeed" type="text"></label>
+      <button id="changeColor">Set New Speed</button>
+    </div>
+  </body>
+  <script src="popup.js"></script>
+</html>
